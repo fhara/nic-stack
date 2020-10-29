@@ -1,0 +1,21 @@
+apiVersion: v2
+stacks:
+- id: my-nodejs-express-stack
+  name: Node.js Express
+  version: 0.4.0
+  description: Express web framework for Node.js
+  license: Apache-2.0
+  language: nodejs
+  maintainers:
+  - name: Fumitaka Hara
+    email: fumitaka.hara@niandc.co.jp
+    github-id: fhara
+  default-template: simple
+  src: file:///root/.appsody/stacks/dev.local/my-nodejs-express-stack.v0.4.0.source.tar.gz
+  templates:
+  - id: simple
+    url: file:///root/.appsody/stacks/dev.local/my-nodejs-express-stack.v0.4.0.templates.simple.tar.gz
+  requirements:
+    docker-version: '>= 17.09.0'
+    appsody-version: '>= 0.2.7'
+  image: dev.local/appsody/my-nodejs-express-stack:0.4.0
